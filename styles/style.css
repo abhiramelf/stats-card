@@ -11,6 +11,14 @@ body {
     background-color: hsl(233, 47%, 7%);
 }
 
+.desktop__img {
+    opacity: 0;
+}
+
+.mobile__img {
+    opacity: 1;
+}
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -97,4 +105,92 @@ body {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
     text-decoration: none;
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .desktop__img {
+        opacity: 1;
+    }
+    
+    .mobile__img {
+        opacity: 0;
+    }
+
+    .container {
+        margin: 0;
+    }
+
+    .stats__card {
+        position: relative;
+        width: 1040px;
+        height: 446px;
+        background-color: hsl(244, 38%, 16%);
+        border-radius: 10px;
+    }
+
+    .stats__image {
+        position: absolute;
+        left: 15.6rem;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        clip-path: inset(0 24% 0 26% round 0 10px 10px 0);
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0; 
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: hsl(277, 64%, 61%);
+        mix-blend-mode: multiply;
+        clip-path: inset(0 0 0 0 round 10px 10px 0 0);
+    } 
+
+    .stats__head {
+        position: inherit;
+        top: 0;
+        left: 4%;
+        display: inline-block;
+        text-align: left;
+        width: 45%;
+        padding: 5% 5%;
+        color: hsl(0, 0%, 100%);
+    }
+
+    .stats_description {
+        position: inherit;
+        top: 0;
+        right: 1%;
+        display: block;
+        width: 55%;
+        text-align: left;
+        line-height: 25px;
+        padding: 0 10% 8% 10%;
+        color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .stats__figures {
+        position: inherit;
+        top: 0;
+        right: 25%;
+        text-align: center;
+    }
+
+    .stats__figures__one {
+        display: inline-block;
+    }
+
+    .stats__figures__two {
+        display: inline-block;
+        padding: 0 6%;
+    }
+
+    .stats__figures__three {
+        display: inline-block;
+    }
+
 }
